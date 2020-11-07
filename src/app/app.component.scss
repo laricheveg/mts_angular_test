@@ -1,8 +1,4 @@
-
-
 .page-wrapper {
-
-
 
     .header-row {
         display: flex;
@@ -19,7 +15,6 @@
             }
         }
 
-        
         @media screen and (max-width: 400px){
             .header-row-sort {
                 flex-direction: column;
@@ -42,7 +37,6 @@
             align-items: center;
         }
     }
-
 
 }
 

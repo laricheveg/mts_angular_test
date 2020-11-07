@@ -29,9 +29,7 @@ export class ChannelsService {
         if (oldFilter) {
           this.updateFilter(oldFilter)
         }
-      }
-     
-    );
+      });
   }
 
   updateFilter(filter: IFilter) {

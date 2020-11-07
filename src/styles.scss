@@ -1,8 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
 
-// html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 
 body {
     background-image: url('assets/images/background.png');
@@ -10,7 +7,6 @@ body {
     color: white;
     padding: 51px 137px;
 }
-
 
 //material override
 .mat-tab-nav-bar, .mat-tab-header {
@@ -25,6 +21,7 @@ body {
     color: white;
 }
 
+//adaptive
 @media screen and (max-width: 1200px){
     body {
         padding: 51px 15px;

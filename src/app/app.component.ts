@@ -9,7 +9,7 @@ import { take } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy{
+export class AppComponent implements OnInit, OnDestroy {
   title = 'mts-test-app';
 
   sortControl: FormControl = new FormControl('');
@@ -17,9 +17,9 @@ export class AppComponent implements OnInit, OnDestroy{
   countControl: FormControl = new FormControl('');
 
   constructor(private channelsService: ChannelsService) {
-    
+
   }
-  
+
   sortOptions = [
     {
       name: 'Сортировка',
@@ -48,30 +48,29 @@ export class AppComponent implements OnInit, OnDestroy{
       name: 'Жанр 2',
       value: 'Жанр 2'
     },
-]
-
+  ]
 
   ngOnInit() {
     this.channelsService.filter.pipe(
       take(1)
     )
-    .subscribe(data => {
+      .subscribe(data => {
         this.filterControl.setValue(data['genre']);
         this.countControl.setValue(data['count']);
         this.sortControl.setValue(data['sortControl']);
-    })
+      })
 
     merge(
       this.filterControl.valueChanges,
       this.countControl.valueChanges,
       this.sortControl.valueChanges,
-    ).subscribe( (data) => {
+    ).subscribe((data) => {
       console.log(data)
 
       var filter: IFilter = {
-        sort:  this.sortControl.value,
+        sort: this.sortControl.value,
         genre: this.filterControl.value,
-        count:  this.countControl.value,
+        count: this.countControl.value,
       }
 
       this.channelsService.updateFilter(filter)
