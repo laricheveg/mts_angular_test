@@ -1,0 +1,16 @@
+<div class="custom-dropdown-wrapper" [ngClass]="{ 'active': isOpen}">
+    <div class="custom-dropdown-value" (click)="toggle()">
+        <span class="value">{{currentName}}</span> 
+        <span class="arrow"></span> 
+    </div>
+    <div class="dropdown-list" >
+        <div class="dropdown-options" 
+        *ngFor="let options of options"
+        (click)="selectOption(options.value, options.name)">
+            {{options.name}}
+        </div>
+        <div class="reset-option"  (click)="selectOption(null, options[0]['name'] )">
+             Сбросить выбор
+        </div>
+    </div>
+</div>

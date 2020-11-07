@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+body {
+    background-image: url('assets/images/background.png');
+    background-size: cover;
+    color: white;
+    padding: 51px 137px;
+}
+
+
+//material override
+.mat-tab-nav-bar, .mat-tab-header {
+    border-bottom: 0px solid #C4C4C4;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #BA9D5A;
+}
+
+.mat-tab-label, .mat-tab-link {
+    color: white;
+}
+
+@media screen and (max-width: 1200px){
+    body {
+        padding: 51px 15px;
+    }
+}

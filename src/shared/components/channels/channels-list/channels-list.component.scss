@@ -1,0 +1,49 @@
+.channels-list {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+.channels-count {
+    font-size: 18px
+}
+
+.channels-list {
+    margin-top: 10px;
+
+    app-channels-item {
+        width: 14.5%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 1200px)  and (min-width: 768px){
+    .channels-list {    
+        app-channels-item {
+            width: 21%;
+            margin: 2%;
+        }
+    }
+}
+
+  @media screen and (max-width: 767px)  and (min-width: 320px){
+    .channels-list {    
+        app-channels-item {
+            width: 44%;
+            margin: 3%;
+        }
+    }
+}
+
+.load-more-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .load-more-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        color: #E8F9FF;
+    }
+}
